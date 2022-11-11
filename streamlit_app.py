@@ -1,6 +1,6 @@
 import streamlit
 import pandas
-#import requests
+import requests
 #import snowflake.connector
 #from urllib.error import URLError
 
@@ -18,8 +18,8 @@ fruits_selected = streamlit.multiselect("Pick some fruits:", list(my_fruit_list.
 fruits_to_show = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_to_show)
 
-# Let's put a pick list here so they can pick the fruit they want to include 
-
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+streamlit.text(fruityvice_response)
 
 
 # Display the table on the page.
@@ -31,7 +31,7 @@ streamlit.dataframe(fruits_to_show)
 #   if not fruit_choice:
 #       streamlit.error("Please select a fruit to get information.")
 #   else:
-#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chice)
+
 #fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 #streamlit.dataframe(fruityvice_normalize
 
