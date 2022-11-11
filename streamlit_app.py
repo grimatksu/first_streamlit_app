@@ -5,10 +5,10 @@ import streamlit
 #from urllib.error import URLError
 
 streamlit.title('My Parents New Healthy Diner')
-#streamlit.text('Today\'s Menu')
-#streamlit.text('Bacon & Eggs')
-#streamlit.text('Biscuits & Gravy')
-#streamlit.text('Omelette')
+streamlit.header('Today\'s Menu')
+streamlit.text('Bacon & Eggs')
+streamlit.text('Biscuits & Gravy')
+streamlit.text('Omelette')
 #streamlit.title(':strawberry: Build Your Own Smoothie')
 
 
